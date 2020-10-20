@@ -14,7 +14,7 @@ import {
   defaultTimeoutHandler,
   TimeoutHandler,
   useTimeout,
-} from 'usetimeout-react-hook';
+} from '@MarbleTechnologies/usetimeout-react-hook';
 
 const defaultTimeForInactivity = 10000;
 const defaultStyle: ViewStyle = {
@@ -51,6 +51,8 @@ export interface UserInactivityProps<T = unknown> {
    */
   children: React.ReactNode;
 
+  disabled: boolean;
+
   /**
    * If set to true, the timer is not reset when the keyboard appears
    * or disappears.
@@ -80,6 +82,7 @@ const UserInactivity: React.FC<UserInactivityProps> = ({
   style,
   timeForInactivity,
   timeoutHandler,
+  disabled = false,
 }) => {
   const actualStyle = style || defaultStyle;
 
@@ -116,7 +119,7 @@ const UserInactivity: React.FC<UserInactivityProps> = ({
     setActive(false);
     onAction(false);
     // @ts-ignore
-  }, timeout, actualTimeoutHandler, [date, timeout]);
+  }, timeout, actualTimeoutHandler, disabled, [date, timeout]);
 
   const isFirstRender = useRef(true);
 

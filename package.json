@@ -1,5 +1,5 @@
 {
-  "name": "react-native-user-inactivity",
+  "name": "@MarbleTechnologies/react-native-user-inactivity",
   "version": "1.1.0",
   "description": "React Native component that notifies if the user is active or not",
   "main": "lib/index.js",
@@ -24,10 +24,13 @@
     "tracking",
     "inactivity"
   ],
-  "author": "Alberto Schiabel (https://github.com/jkomyno)",
+  "author": "Robert Kim <rkty13@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
-    "usetimeout-react-hook": "^0.1.2"
+    "@MarbleTechnologies/usetimeout-react-hook": "^1.0.0"
   },
   "devDependencies": {
     "@types/react": "^16.9.11",
