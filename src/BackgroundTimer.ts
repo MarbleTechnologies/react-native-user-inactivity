@@ -1,5 +1,5 @@
-import BackgroundTimer from 'react-native-background-timer';
 import { TimeoutHandler } from '@MarbleTechnologies/usetimeout-react-hook';
+import BackgroundTimer from 'react-native-background-timer';
 
 /**
  * defaultBackgroundTimer implements the TimeoutHandler interface with the native timer

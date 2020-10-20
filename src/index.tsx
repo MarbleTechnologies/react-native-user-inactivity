@@ -1,3 +1,8 @@
+import {
+  defaultTimeoutHandler,
+  TimeoutHandler,
+  useTimeout,
+} from '@MarbleTechnologies/usetimeout-react-hook';
 import React, {
   useEffect,
   useRef,
@@ -10,11 +15,6 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
-import {
-  defaultTimeoutHandler,
-  TimeoutHandler,
-  useTimeout,
-} from '@MarbleTechnologies/usetimeout-react-hook';
 
 const defaultTimeForInactivity = 10000;
 const defaultStyle: ViewStyle = {
